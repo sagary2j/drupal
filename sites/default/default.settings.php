@@ -597,6 +597,8 @@ if ($settings['hash_salt']) {
  */
 # ini_set('pcre.backtrack_limit', 200000);
 # ini_set('pcre.recursion_limit', 200000);
+ini_set('mbstring.http_input', 'pass');
+ini_set('mbstring.http_output', 'pass');
 
 /**
  * Active configuration settings.
