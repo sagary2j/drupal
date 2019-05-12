@@ -88,7 +88,9 @@
  * ];
  * @endcode
  */
-$databases = [];
+$databases = array ('default'=>array ('default'=>array ('database'=>'drupal','username'=>'myadmin@mydrupalserver',
+'password'=>'deployit@123','host'=>'mydrupalserver.mysql.database.azure.com','port'=>'3306',
+'driver'=>'mysql','prefix'=>'',),),);
 
 /**
  * Customizing database settings.
