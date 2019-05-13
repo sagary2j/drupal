@@ -88,8 +88,10 @@
  * ];
  * @endcode
  */
-$databases = [];
-
+#$databases = [];
+$databases = array ('default'=>array ('default'=>array ('database'=>'drupal','username'=>'myadmin@mydrupalserver',
+'password'=>'deployit@123','host'=>'mydrupalserver.mysql.database.azure.com','port'=>'3306',
+'driver'=>'mysql','prefix'=>'',),),);
 /**
  * Customizing database settings.
  *
@@ -584,6 +586,9 @@ if ($settings['hash_salt']) {
  * Settings defined there should not be duplicated here so as to avoid conflict
  * issues.
  */
+
+ini_set('mbstring.http_input', 'pass');
+ini_set('mbstring.http_output', 'pass');
 
 /**
  * If you encounter a situation where users post a large amount of text, and
